@@ -9,6 +9,9 @@ export interface Props {
 }
 
 const { title, author, publishDate, heroImage, alt } = Astro.props;
+
+let twitter_name = '@NooraLeino';
+let twitter_url = 'https://twitter.com/nooraleino';
 ---
 
 <div class="layout">
@@ -18,7 +21,7 @@ const { title, author, publishDate, heroImage, alt } = Astro.props;
       {heroImage && <img width="720" height="420" class="hero-image" loading="lazy" src={heroImage} alt={alt} />}
       <p class="publish-date">{publishDate}</p>
       <h1 class="title">{title}</h1>
-      <Author name="@NooraLeino" href="https://twitter.com/nooraleino" />
+      <Author name={twitter_name} href={twitter_url} />
     </header>
     <main>
       <slot />
